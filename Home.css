@@ -1,0 +1,39 @@
+.home-container {
+  width: 1496px;
+  height: 557px;
+  background-image: url("../components/carbonfoot.jpg"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke; 
+  text-align: center;
+  padding: 20px;
+}
+
+.home-container h1 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.9);
+  font-style: italic;
+}
+
+.begin-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1B4332;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.begin-button:hover {
+  background-color: #D8F3DC;
+  color: #1B4332;
+}

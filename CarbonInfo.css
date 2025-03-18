@@ -1,0 +1,326 @@
+.carbon-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #e0f2f1);
+  padding: 5px;
+}
+
+.carbon-info-card {
+  max-width: 1700px;
+  background: #D8F3DC;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; 
+}
+
+.carbon-cards {
+  background:#9CAF88;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; 
+  padding: 20px;
+  height: 570px;
+  width: 400px;
+}
+
+.carbon-cards2 {
+  background:#9CAF88;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; 
+  padding: 20px;
+  height: 370px;
+  width: 600px;
+}
+.carbon-cards3 {
+  background:#9CAF88;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; 
+  padding: 20px;
+  height: 920px;
+  width: 650px;
+}
+.carbon-cards4 {
+  background:#9CAF88;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; 
+  padding: 20px;
+  height: 520px;
+  width: 650px;
+}
+.carbon-title {
+  font-size: 65px;
+  font-weight: 91000;
+  color: #081C15;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.carbon-subtitle {
+  font-size: 45px;
+  font-weight: 800;
+  color:#081C15;
+  margin-top: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carbon-text {
+  font-size: 28px;
+  line-height: 1.6;
+  color: #2D6A4F;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carbon-list {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.carbon-list li {
+  font-size: 23px;
+  margin: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #081C15;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.carbon-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.carbon-button:hover {
+  background: #004d40;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.points{
+  font-size: 26px;
+  color: #F5F5DC;
+  font-weight: 700;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scopes {
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+}
+
+.second {
+  display: flex;
+  flex-direction: row;
+  gap: 150px;
+}
+
+.third {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.carbon-cards, 
+.carbon-cards2, 
+.carbon-cards3, 
+.carbon-cards4 {
+  background: #9CAF88;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: 
+    transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), 
+    box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.carbon-cards::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.carbon-cards:hover, 
+.carbon-cards2:hover, 
+.carbon-cards3:hover, 
+.carbon-cards4:hover {
+  transform: 
+    translateY(-12px) 
+    rotateX(5deg) 
+    rotateY(5deg) 
+    scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.carbon-cards:hover::before {
+  opacity: 1;
+}
+
+.carbon-info-card {
+  background: linear-gradient(135deg, #D8F3DC, #B7E4C7);
+  padding: 30px;
+  border-radius: 15px;
+  transition: background-position 0.7s ease;
+  background-size: 300% 300%;
+}
+
+.carbon-info-card:hover {
+  background-position: 100% 100%;
+}
+
+.carbon-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 
+    background 0.5s ease, 
+    transform 0.2s ease, 
+    box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.carbon-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.carbon-button:hover {
+  background: linear-gradient(135deg, #004d40, #00796b);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.carbon-button:hover::after {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+
+.carbon-button:active {
+  transform: scale(0.95);
+}
+
+.carbon-title {
+  font-size: 65px;
+  font-weight: 900;
+  color: #081C15;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.carbon-title:hover {
+  color: #1b5e20;
+  animation: glitch 0.5s ease-in-out;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.carbon-list li {
+  font-size: 23px;
+  margin: 8px 0;
+  padding-left: 20px;
+  color: #081C15;
+  font-weight: 700;
+  position: relative;
+  transition: 
+    transform 0.4s ease, 
+    color 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.carbon-list li:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.carbon-list li:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.carbon-list li:hover {
+  transform: translateX(12px) scale(1.05);
+  color: #1b5e20;
+}
+
+
