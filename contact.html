@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SustainaSphere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="xyz.css">
+</head>
+
+<body>
+
+
+    <div class="pic">
+        <div class="navbar" id="navbar">
+            <div class="navbar-brand">
+                <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+                <span class="navbar-name">SustainaSphere</span>
+            </div>
+            <div class="navbar-links">
+                <a href="home.html" target="_blank">Home</a>
+                <a href="aboutus.html" target="_blank">About Us</a>
+                <a href="register.html" target="_blank">Register</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main">
+        <h2> CONTACT <span class="bold">US</span></h2><br>
+        <div class="form">
+            <div class="form-inputs">
+                <form>
+                    <input type="text" id="name" name="name" placeholder="NAME" required> <br><br><br>
+
+                    <input type="email" id="email" name="email" placeholder="EMAIL" required><br><br><br>
+
+                    <input type="text" id="company" name="company" placeholder="Company"><br><br><br>
+
+                    <input type="text" id="position" name="position" placeholder="Position"><br><br><br>
+
+                    <input id="message" name="message" placeholder="MESSAGE" required><br><br><br>
+
+                    <button type="submit">SEND MESSAGE </button><br><br>
+
+                    <label for="terms" style="font-size: 10px;">
+                        <input type="checkbox" id="terms" name="terms" style="width: 16px; font-size:20px;">
+                        I agree to the terms of service
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="home.html" target="_blank">Home</a></li>
+                    <li><a href="events.html" target="_blank">Events</a></li>
+                    <li><a href="team.html" target="_blank">Our Team</a></li>
+                    <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>World Sustainable Development Summit 2025<br>5-7 March, 2025</li>
+                    <li>12th Annual World Ocean Summit & Expo<br>12-13 March, 2025</li>
+                    <li>2025 UN Development Cooperation Forum<br>12-13 March, 2025</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function () {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = "#39644c";
+            } else {
+                navbar.style.backgroundColor = "transparent";
+            }
+        };
+    </script>
+
+</body>
+
+</html>

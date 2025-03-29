@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8f3dc;  
+    background-image: url("bg 3 contactus.png");
+    color: #081c15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.contact-form {
+    background-color: #4a7058; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    box-sizing: border-box;
+}
+.contact-form h1 {
+    text-align: center;
+    color: #13211b;
+}
+.contact-form p {
+    text-align: center;
+    color: #153225;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #40916c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #95d5b2;
+    color: #081c15;
+}
+.contact-form input[type="submit"] {
+    background-color: #74c69d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: #52b788;
+}
+.contact-form ::placeholder {
+    color: #052d1a;
+}

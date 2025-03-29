@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    background-image: url(flower-7473044_1920.jpg);
+}
+.navbar {
+    
+    background-color:#01060382;
+    padding: 20px;
+    color: #013220;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 100vh; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    gap: 30px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+    height: 120px;
+    width: 120px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.nav-links,
+.auth-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+    margin-top: 20px;
+}
+
+.nav-links a,
+.auth-links a {
+    font-family: "Nova Round", serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2e8b57;
+}
+
+.auth-links .login-btn:hover {
+    background-color: #fff;
+    color: #2e8b57;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.auth-links .register-btn {
+    background-color: #fff;
+    color: #2e8b57;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.auth-links .register-btn:hover {
+    background-color: #2e8b57;
+    color: #fff;;
+}
+
+
+.container .content {
+    margin-left: 270px; 
+    padding: 20px;
+    width: calc(100% - 270px); /
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 60%; 
+    position: absolute;
+    right: 100px;
+    
+}
+
+.registration-form {
+    background-color: #fdf2e7d7;
+    border-radius: 10px;
+    padding: 30px;
+    border: #e7d8c9 solid 2px;
+    width: 80%;
+}
+
+.registration-form h1 {
+    font-family: "Nova Round", serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #1a4e31;
+}
+
+.registration-form label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    color: #162f20;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    color: #013220 ;
+    background-color: #e6cdb2a9;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus,
+.registration-form select:focus {
+    outline: none;
+    border: none;
+    border-color: #2e8b57;
+    box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+}
+
+.registration-form input[type="submit"],
+.registration-form input[type="reset"] {
+    width: 49%;
+    padding: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #2e8b57;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+    font-family: "Nova Round", serif;
+    border: none;
+
+
+}
+
+.registration-form input[type="submit"]:hover,
+.registration-form input[type="reset"]:hover {
+    background-color: #236a4b;
+}
+
+/* 679b7e 
+
+  013220  */
