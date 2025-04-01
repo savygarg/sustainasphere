@@ -5,6 +5,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Navbar */
 .pic {
   width: 1530px;
   height: 400px;
@@ -55,49 +56,6 @@ body {
   color: #013220;
 }
 
-.content {
-  padding: 16px;
-  margin-top: 80px;
-}
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px;
-  background-color: #39644c;
-  color: white;
-  width: 100%;
-  height: 300px;
-}
-
-.footer-section {
-  width: 85%;
-  font-size: small;
-}
-
-.footer-section h3 {
-  font-size: 20px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.footer-section ul {
-  font-size: larger;
-  list-style: none;
-  margin-bottom: 10px;
-  padding: 0;
-  font-family: "Nova Round", serif;
-}
-
-.footer-section li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  color: white;
-  text-decoration: none;
-}
-
 header {
   background-color: #39644c;
   color: white;
@@ -107,6 +65,9 @@ header {
   font-weight: bolder;
   font-family: "Nova Round", serif;
 }
+
+
+/* Featured Sustainability Events */
 
 .container {
   max-width: 1400px;
@@ -132,10 +93,10 @@ h2 {
 }
 
 .event {
-  background-color: #fdf6ec; /* Soft Cream */
+  background-color: #fdf6ec; 
   padding: 15px;
   margin-bottom: 15px;
-  border-left: 5px solid #014421; /* Deep Forest Green */
+  border-left: 5px solid #014421; 
   border-radius: 8px;
   height: 400px;
   width: 400px;
@@ -148,7 +109,7 @@ h2 {
 }
 
 .event h3 {
-  color: #014421; /* Deep Forest Green */
+  color: #014421; 
   border-bottom: 2px solid #014421;
   padding-bottom: 5px;
   font-family: "Nova Round", serif;
@@ -158,92 +119,37 @@ h2 {
 }
 
 .event h3:hover {
-  color: #017a56; /* Lighter Green */
+  color: #017a56; 
 }
 
 .event strong {
-  color: #222222; /* Charcoal Black */
+  color: #222222; 
   padding-bottom: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 21px;
   font-weight: bolder;
   transition: color 0.3s ease-in-out;
 }
 
 .event strong:hover {
-  color: #333333; /* Slightly lighter Charcoal */
+  color: #333333; 
 }
 
 .event p {
-  color: #4e4e4e; /* Dark Slate Gray */
+  color: #4e4e4e; 
   padding-bottom: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 21px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .event p:hover {
-  color: #666666; /* Slightly lighter Gray */
+  color: #666666; 
 }
 
-.filters select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
-.news,
-.resources ul {
-  background: #e3f2fd;
-  padding: 15px;
-  margin-top: 10px;
-  border-left: 5px solid #0288d1;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  width: 100%;
-  background: #2e7d32;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #1b5e20;
-}
-
-.bg-section {
-  background-image: url("tree-9129005_1280.jpg"); /* Ensure the image is in the correct directory */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 400px; /* Adjust the height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+/* Find Your Event */
 
 .grid-view {
   display: grid;
@@ -319,7 +225,7 @@ label[for="categoryFilter"] {
 }
 
 .filters select {
-  width: 100%; /* Makes the dropdown full-width */
+  width: 100%; 
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #013220;
@@ -333,7 +239,7 @@ label[for="categoryFilter"] {
   margin-right: 5px;
 }
 
-/* Styling for the Sort By filter */
+
 #sortFilter {
   width: 100%;
   padding: 10px;
@@ -344,7 +250,6 @@ label[for="categoryFilter"] {
   cursor: pointer;
 }
 
-/* Style for the Sort By label */
 label[for="sortFilter"] {
   font-size: 22px;
   font-weight: bold;
@@ -352,7 +257,7 @@ label[for="sortFilter"] {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Styling for the Toggle View button */
+
 #toggleViewBtn {
   background-color: #013220;
   color: white;
@@ -372,7 +277,8 @@ label[for="sortFilter"] {
 
 
 
-/* Calendar container */
+/* Calendar */
+
 .calendar-container {
   width: 100%;
   max-width: 600px;
@@ -384,7 +290,7 @@ label[for="sortFilter"] {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Calendar header (month navigation) */
+
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -407,7 +313,7 @@ label[for="sortFilter"] {
   background: #1b5e20;
 }
 
-/* Days of the week */
+
 .days-of-week {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -416,7 +322,7 @@ label[for="sortFilter"] {
   padding: 10px;
 }
 
-/* Calendar days */
+
 .calendar-days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -435,14 +341,13 @@ label[for="sortFilter"] {
   background: #c8e6c9;
 }
 
-/* Highlight event days */
+
 .event-day {
   background: #2e7d32 !important;
   color: white;
   font-weight: bold;
 }
 
-/* Popup styling */
 .popup {
   display: none;
   position: fixed;
@@ -465,6 +370,10 @@ label[for="sortFilter"] {
   font-size: 20px;
   cursor: pointer;
 }
+
+
+
+/* News Section */
 
 .news-section {
   background: rgba(51, 122, 86, 0.378);
@@ -533,7 +442,7 @@ label[for="sortFilter"] {
   background: #1b5e20;
 }
 
-/* Flexbox Container */
+/* Resources and Guides */
 .resources-guides-container {
   display: flex;
   justify-content: space-around;
@@ -542,7 +451,7 @@ label[for="sortFilter"] {
   padding: 20px;
 }
 
-/* Styling for Each Box (Resources & Guides) */
+
 .section-box {
   flex: 1;
   min-width: 300px;
@@ -554,26 +463,25 @@ label[for="sortFilter"] {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Box */
+
 .section-box:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Heading Style */
+
 .section-box h2 {
   text-align: center;
   color: #014421;
   margin-bottom: 15px;
 }
 
-/* List Styling */
 .resources-list, .guides-list {
   list-style: none;
   padding: 0;
 }
 
-/* Links */
+
 .resources-list li, .guides-list li {
   background: white;
   margin: 8px 0;
@@ -582,24 +490,24 @@ label[for="sortFilter"] {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effect for List Items */
+
 .resources-list li:hover, .guides-list li:hover {
   background-color: #e0f7e9;
   transform: translateX(10px);
 }
 
-/* Link Styling */
 .resources-list a, .guides-list a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: bold;
   color: #014421;
   display: flex;
   align-items: center;
   transition: color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Icon Effects */
+
 .resources-list a::before, .guides-list a::before {
   content: "🔗";
   margin-right: 10px;
@@ -611,10 +519,144 @@ label[for="sortFilter"] {
   transform: rotate(10deg);
 }
 
-/* Responsive: Stacks on Small Screens */
-@media (max-width: 768px) {
-  .resources-guides-container {
-      flex-direction: column;
-      align-items: center;
-  }
+/* Community Engagement */
+.community-container {
+  background: rgba(51, 122, 86, 0.378); 
+  padding: 50px 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
+
+.community-container:hover {
+  transform: scale(1.02);
+}
+
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #013220;
+  font-family: "Nova Round", serif;
+  margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.section-title:hover {
+  color: #014421;
+}
+
+
+.event-submission, .discussion-forum {
+  background: rgba(255, 255, 255, 0.129); 
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.event-submission:hover, .discussion-forum:hover {
+  transform: translateY(-5px);
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #013220;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #013220;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(13, 71, 161, 0.3);
+}
+
+
+.btn-submit, .btn-post {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-submit {
+  background-color: #013220;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #014421;
+  transform: scale(1.05);
+}
+
+.btn-post {
+  background-color: #013220;
+  color: white;
+}
+
+.btn-post:hover {
+  background-color: #014421;
+  transform: scale(1.05);
+}
+
+/* .content {
+  padding: 16px;
+  margin-top: 80px;
+} */
+
+
+/* Footer */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  background-color: #39644c;
+  color: white;
+  width: 100%;
+  height: 300px;
+}
+
+.footer-section {
+  width: 85%;
+  font-size: small;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer-section ul {
+  font-size: larger;
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0;
+  font-family: "Nova Round", serif;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
