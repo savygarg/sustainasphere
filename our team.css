@@ -10,81 +10,7 @@ body {
     background-attachment: fixed;
     color: #2d6a4f;
 }
-/* alternate nav bar */
- /* .navbar {
-    width: 100%;
-    background: #2d6a4f;
-    backdrop-filter: blur(100px);
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-    box-sizing: border-box;
-    z-index: 1000;
-    box-shadow: 0 2px 15px rgba(45, 106, 79, 0.12);
-}
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.navbar-logo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.navbar-logo:hover {
-    transform: scale(1.1);
-}
-
-.navbar-name {
-    color:white;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.navbar-links {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar-links a {
-    color:white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
- .navbar-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background:#2d6a4f;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-} 
-
- .navbar-links a:hover::after {
-    width: 80%;
-} 
-
- .content {
-    padding: 16px;
-    margin-top: 80px; 
-}   */
 
 .navbar {
     transition: background-color 0.5s ease-in-out;
@@ -139,7 +65,7 @@ body {
   
 /* team banner  */
 
-.team-banner {
+/* .team-banner {
     background: linear-gradient(135deg, #01120a 0%, #c0a1aa 100%);
     color: #d8f3dc;
     text-align: left;
@@ -153,7 +79,7 @@ body {
 }
 
 .team-banner::before {
-    content: '';
+     content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -161,14 +87,14 @@ body {
     bottom: 0;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     opacity: 0.1;
-}
+}  */
 
 .team-banner h1 {
     font-size: 48px;
     letter-spacing: 4px;
     font-family: 'Nova Round', sans-serif;
     font-weight: 600;
-    margin: 0;
+    margin:0;
     position: relative;
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
