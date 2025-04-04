@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 dayDiv.addEventListener("click", function () {
                     popupTitle.innerText = event.title;
                     popupDetails.innerText = event.details;
-                    eventPopup.style.display = "block";
+                    eventPopup.style.display = "flex";
                 });
             }
 
@@ -149,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let visibleNews = 3; 
 
     function updateNewsTicker() {
+        if (!newsTickerText || !newsData.length) return;
+        
         let index = 0;
         function changeNews() {
             newsTickerText.innerText = newsData[index].title;
@@ -185,4 +187,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateNewsTicker();
     renderNews();
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const eventForm = document.getElementById("eventForm");
+
+    eventForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevents page reload
+
+        const submitBtn = eventForm.querySelector(".submit-btn");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        const eventData = {
+            title: document.getElementById("eventTitle").value,
+            date: document.getElementById("eventDate").value,
+            location: document.getElementById("eventLocation").value,
+            description: document.getElementById("eventDescription").value
+        };
+
+        fetch("http://localhost:5000/add-event", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(eventData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            eventForm.reset(); // Clear form fields
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("There was an error submitting your event. Please try again later.");
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Event";
+        });
+    });
 });
