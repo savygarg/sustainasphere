@@ -6,150 +6,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - SustainaSphere</title>
     <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <meta name="description" content="Discover sustainability events, workshops, and conferences on SustainaSphere">
 </head>
 
 <body>
-  
-    <div class="pic">
+    <!-- Floating Chat Button -->
+    <a href="chatbot.html" target="_blank" class="chat-button-container">
+        <img src="botpic1.png" class="chat-button" alt="chatbot">
+        <span class="chat-tooltip">Chat with our Eco-Bot!</span>
+    </a>
+
+    <!-- Hero Section with Background Image -->
+    <div class="hero-section">
         <div class="navbar" id="navbar">
             <div class="navbar-brand">
-                <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
-                <span class="navbar-name">SustainaSphere</span>
+                <a href="home.html">
+                    <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+                    <span class="navbar-name">SustainaSphere</span>
+                </a>
             </div>
             <div class="navbar-links">
                 <a href="home.html">Home</a>
-                <a href="ourteam.html">Our Team</a>
+                <a href="aboutus.html">About Us</a>
                 <a href="register.html">Register</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contactus.html">Contact Us</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         
         <header class="heading">
-            <h1> Events</h1>
+            <h1>Events</h1>
+            <p>Discover sustainability events, workshops, and conferences</p>
         </header>
+    </div>
 
-        <section class="container">
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Featured Events Section -->
+        <section class="container featured-events">
             <h2>Featured Sustainability Events</h2>
             <div class="event-list">
                 <div class="event">
-                    <h3>8th ESG and Sustainability Strategy India Summit 2025</h3>
-                    <p><strong>Date:</strong> To be announced | <strong>Location:</strong> To be announced</p>
-                    <p>One of India's premier conferences providing a platform for industry leaders and stakeholders to
-                        discuss key sustainability challenges, compliance, regulatory guidelines, and the latest
-                        innovations.</p>
+                    <div class="event-image">
+                        <img src="esg-summit.jpg" alt="ESG Summit">
+                        <div class="event-date">
+                            <span class="month">TBA</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>8th ESG and Sustainability Strategy India Summit 2025</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> To be announced | <i class="fas fa-map-marker-alt"></i> To be announced</p>
+                        <p>One of India's premier conferences providing a platform for industry leaders and stakeholders to
+                            discuss key sustainability challenges, compliance, regulatory guidelines, and the latest
+                            innovations.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="event">
-                    <h3>Ziro Festival</h3>
-                    <p><strong>Date:</strong> To be announced | <strong>Location:</strong> Ziro Valley, Arunachal
-                        Pradesh</p>
-                    <p>A unique festival promoting sustainability, community, and indigenous culture. It features
-                        independent artists while embracing eco-friendly festival practices.</p>
+                    <div class="event-image">
+                        <img src="ziro-festival.jpg" alt="Ziro Festival">
+                        <div class="event-date">
+                            <span class="month">TBA</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Ziro Festival</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> To be announced | <i class="fas fa-map-marker-alt"></i> Ziro Valley, Arunachal Pradesh</p>
+                        <p>A unique festival promoting sustainability, community, and indigenous culture. It features
+                            independent artists while embracing eco-friendly festival practices.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
                 <div class="event">
-                    <h3>Echoes of Earth</h3>
-                    <p><strong>Date:</strong> Dec 7-8, 2024 | <strong>Location:</strong> Bengaluru</p>
-                    <p>Touted as India's greenest music festival, Echoes of Earth emphasizes music, art, sustainability,
-                        and culture while hosting performances amidst lush greenery.
-
-                    </p>
+                    <div class="event-image">
+                        <img src="echoes-earth.jpg" alt="Echoes of Earth">
+                        <div class="event-date">
+                            <span class="month">DEC</span>
+                            <span class="day">7-8</span>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Echoes of Earth</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> Dec 7-8, 2024 | <i class="fas fa-map-marker-alt"></i> Bengaluru</p>
+                        <p>Touted as India's greenest music festival, Echoes of Earth emphasizes music, art, sustainability,
+                            and culture while hosting performances amidst lush greenery.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
             </div>
-            <div class="event-list">
-                <div class="event">
-                    <h3>World Sustainable Development Summit 2025</h3>
-                    <p><strong>Date:</strong> March 5-7, 2025| <strong>Location:</strong> India Habitat Centre, New Delhi
-                    </p>
-                    <p>Organized by The Energy and Resources Institute (TERI), this annual summit brings together global
-                        leaders, policymakers, and researchers to discuss sustainability policies and strategies.
-                    </p>
+        </section>
+
+        <!-- Event Search and Filter Section -->
+        <section class="container event-search">
+            <h2>Find Your Event</h2>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchBar" placeholder="Search events...">
                 </div>
                 
-                <div class="event">
-                    <h3>Maha Kumbh Mela 2025 (Sustainable Practices)</h3>
-                    <p><strong>Date:</strong> January 14 - March 4, 2025| <strong>Location:</strong> Prayagraj, Uttar Pradesh
-
-                    </p>
-                    <p>With an expected 400 million visitors, this mega event is implementing sustainability measures such as solar lighting, biodegradable materials, and waste management systems.
-                    </p>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="conference">Conference</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="festival">Festival</option>
+                            <option value="community">Community Event</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Location:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" class="filter-checkbox" value="virtual"> Virtual</label>
+                            <label><input type="checkbox" class="filter-checkbox" value="india"> India</label>
+                            <label><input type="checkbox" class="filter-checkbox" value="global"> Global</label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sortFilter">Sort By:</label>
+                        <select id="sortFilter">
+                            <option value="date">Date</option>
+                            <option value="popularity">Popularity</option>
+                            <option value="location">Location</option>
+                        </select>
+                    </div>
+                    
+                    <button id="toggleViewBtn" class="view-toggle">
+                        <i class="fas fa-th-large"></i> Toggle View
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <section class="container">
-            <h2> Find Your Event</h2>
-            <input type="text" id="searchBar" placeholder="Search events...">
-    <br><br>
-            <div class="filters">
-                <label for="categoryFilter">Category:</label>
-                <select id="categoryFilter">
-                    <option value="all">All</option>
-                    <option value="conference">Conference</option>
-                    <option value="workshop">Workshop</option>
-                    <option value="festival">Festival</option>
-                    <option value="community">Community Event</option>
-                </select>
-    
-                <label><input type="checkbox" class="filter-checkbox" value="virtual"> Virtual</label>
-                <label><input type="checkbox" class="filter-checkbox" value="india"> India</label>
-                <label><input type="checkbox" class="filter-checkbox" value="global"> Global</label>
-    
-                <label for="sortFilter">Sort By:</label>
-                <select id="sortFilter">
-                    <option value="date">Date</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="location">Location</option>
-                </select>
-            </div>
-    
-            <button id="toggleViewBtn">Toggle View</button>
-    <br><br>
+            
             <div class="event-list" id="eventList">
                 <div class="event" data-category="conference" data-popularity="5" data-location="india" data-date="2025-04-15">
-                    <h3> India Sustainability Summit 2025</h3>
-                    <p><strong>Date:</strong> April 15, 2025 | <strong>Location:</strong> New Delhi, India</p>
-                    <p>A leading conference discussing ESG policies and green energy solutions.</p>
+                    <div class="event-image">
+                        <img src="india-summit.jpg" alt="India Sustainability Summit">
+                        <div class="event-date">
+                            <span class="month">APR</span>
+                            <span class="day">15</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>India Sustainability Summit 2025</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> April 15, 2025 | <i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                        <p>A leading conference discussing ESG policies and green energy solutions.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
-    
+                
                 <div class="event" data-category="festival" data-popularity="4" data-location="india" data-date="2025-09-10">
-                    <h3> Ziro Green Music Festival</h3>
-                    <p><strong>Date:</strong> September 10, 2025 | <strong>Location:</strong> Arunachal Pradesh, India</p>
-                    <p>Eco-friendly music festival promoting sustainability through art and culture.</p>
+                    <div class="event-image">
+                        <img src="ziro-green.jpg" alt="Ziro Green Music Festival">
+                        <div class="event-date">
+                            <span class="month">SEP</span>
+                            <span class="day">10</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Ziro Green Music Festival</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> September 10, 2025 | <i class="fas fa-map-marker-alt"></i> Arunachal Pradesh, India</p>
+                        <p>Eco-friendly music festival promoting sustainability through art and culture.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
-    
+                
                 <div class="event" data-category="workshop" data-popularity="3" data-location="global" data-date="2025-06-20">
-                    <h3>Circular Economy Workshop</h3>
-                    <p><strong>Date:</strong> June 20, 2025 | <strong>Location:</strong> Online</p>
-                    <p>Learn how to create a sustainable business model using circular economy principles.</p>
+                    <div class="event-image">
+                        <img src="circular-economy.jpg" alt="Circular Economy Workshop">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="day">20</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Circular Economy Workshop</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> June 20, 2025 | <i class="fas fa-map-marker-alt"></i> Online</p>
+                        <p>Learn how to create a sustainable business model using circular economy principles.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
-    
+                
                 <div class="event" data-category="community" data-popularity="2" data-location="india" data-date="2025-05-08">
-                    <h3> Clean the Coast Initiative</h3>
-                    <p><strong>Date:</strong> May 8, 2025 | <strong>Location:</strong> Mumbai, India</p>
-                    <p>Join us for a beach clean-up drive to protect marine life and reduce plastic pollution.</p>
+                    <div class="event-image">
+                        <img src="clean-coast.jpg" alt="Clean the Coast Initiative">
+                        <div class="event-date">
+                            <span class="month">MAY</span>
+                            <span class="day">08</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Clean the Coast Initiative</h3>
+                        <p class="event-meta"><i class="fas fa-calendar"></i> May 8, 2025 | <i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                        <p>Join us for a beach clean-up drive to protect marine life and reduce plastic pollution.</p>
+                        <a href="#" class="event-btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="calendar-container">
-            <div class="calendar-header">
-                <button id="prevMonth">&lt;</button>
-                <h2 id="currentMonth">March 2025</h2>
-                <button id="nextMonth">&gt;</button>
-            </div>
-            <div class="calendar">
-                <div class="days-of-week">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
+        <!-- Calendar Section -->
+        <section class="container calendar-section">
+            <h2>Event Calendar</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">March 2025</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div id="calendarDays" class="calendar-days"></div>
+                <div class="calendar">
+                    <div class="days-of-week">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div id="calendarDays" class="calendar-days"></div>
+                </div>
             </div>
-        </div>
+        </section>
         
         <!-- Event Details Popup -->
         <div id="eventPopup" class="popup">
@@ -160,103 +255,219 @@
             </div>
         </div>
         
-        <div class="news-section">
+        <!-- News Section -->
+        <section class="container news-section">
             <h2>Latest News & Updates</h2>
-        
             <div class="news-ticker">
                 <p id="newsTickerText">Loading latest updates...</p>
             </div>
-        
-            <div class="filters">
+            
+            <div class="news-filter">
                 <label for="newsCategory">Filter by Category:</label>
                 <select id="newsCategory">
-                    <option value="all">All</option>
+                    <option value="all">All Categories</option>
                     <option value="technology">Technology</option>
                     <option value="environment">Environment</option>
                     <option value="events">Events</option>
                 </select>
             </div>
-        
-            <div id="newsContainer">
+            
+            <div id="newsContainer" class="news-container">
                 <!-- News articles will be dynamically added here -->
             </div>
-        
-            <button id="loadMoreBtn">Load More</button>
-        </div>
-        
+            
+            <button id="loadMoreBtn" class="load-more-btn">Load More</button>
+        </section>
 
-        <section class="container">
-            <h2> Resources & Guides</h2>
+        <!-- Resources & Guides Section -->
+        <section class="container resources-section">
+            <h2>Resources & Guides</h2>
             <div class="resources-guides-container">
                 <!-- Resources Section -->
                 <div class="section-box">
-                    <h2> Resources</h2>
+                    <h3>Resources</h3>
                     <ul class="resources-list">
-                        <li><a href="https://sdgs.un.org/goals" target="_blank">UN Sustainable Development Goals (SDGs)</a></li>
-                        <li><a href="https://climate.nasa.gov/" target="_blank"> Climate Data & Research - NASA</a></li>
-                        <li><a href="https://www.goingzerowaste.com/" target="_blank"> Zero Waste - Going Zero Waste</a></li>
-                        <li><a href="https://www.nrel.gov/" target="_blank"> Renewable Energy - NREL</a></li>
-                        <li><a href="https://goodonyou.eco/" target="_blank"> Sustainable Fashion - Good On You</a></li>
-                        <li><a href="https://www.ted.com/topics/sustainability" target="_blank"> TED Talks on Sustainability</a></li>
+                        <li>
+                            <a href="https://sdgs.un.org/goals" target="_blank">
+                                <i class="fas fa-globe"></i>
+                                <span>UN Sustainable Development Goals (SDGs)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://climate.nasa.gov/" target="_blank">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Climate Data & Research - NASA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.goingzerowaste.com/" target="_blank">
+                                <i class="fas fa-recycle"></i>
+                                <span>Zero Waste - Going Zero Waste</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nrel.gov/" target="_blank">
+                                <i class="fas fa-solar-panel"></i>
+                                <span>Renewable Energy - NREL</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://goodonyou.eco/" target="_blank">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Sustainable Fashion - Good On You</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.ted.com/topics/sustainability" target="_blank">
+                                <i class="fas fa-video"></i>
+                                <span>TED Talks on Sustainability</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             
                 <!-- Guides Section -->
                 <div class="section-box">
-                    <h2> Guides</h2>
+                    <h3>Guides</h3>
                     <ul class="guides-list">
-                        <li><a href="https://www.epa.gov/recycle" target="_blank"> Recycling & Waste Management</a></li>
-                        <li><a href="https://www.energystar.gov/" target="_blank"> Energy Efficiency - Energy Star</a></li>
-                        <li><a href="https://sustainablelivingguide.org/" target="_blank"> Sustainable Living Guide</a></li>
-                        <li><a href="https://www.greenpeace.org/" target="_blank"> Climate Action - Greenpeace</a></li>
-                        <li><a href="https://www.who.int/health-topics/air-pollution" target="_blank"> Air Pollution & Health - WHO</a></li>
+                        <li>
+                            <a href="https://www.epa.gov/recycle" target="_blank">
+                                <i class="fas fa-trash-alt"></i>
+                                <span>Recycling & Waste Management</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.energystar.gov/" target="_blank">
+                                <i class="fas fa-bolt"></i>
+                                <span>Energy Efficiency - Energy Star</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sustainablelivingguide.org/" target="_blank">
+                                <i class="fas fa-home"></i>
+                                <span>Sustainable Living Guide</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.greenpeace.org/" target="_blank">
+                                <i class="fas fa-hand-holding-heart"></i>
+                                <span>Climate Action - Greenpeace</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.who.int/health-topics/air-pollution" target="_blank">
+                                <i class="fas fa-wind"></i>
+                                <span>Air Pollution & Health - WHO</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            
-            
         </section>
 
-        
-
-        
-        <footer>
-            <div class="footer-container">
-                <div class="footer-section" id="navigate">
-                    <h3>NAVIGATE</h3>
-                    <ul>
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="aboutus.html">ABOUT US</a></li>
-                        <li><a href="services">OUR OFFER</a></li>
-                        <li><a href="ourteam.html">OUR TEAM</a></li>
-                        <li><a href="news">NEWS</a></li>
-                        <li><a href="contactus.html">CONTACT US</a></li>
-                    </ul>
+        <!-- Community Engagement Section -->
+        <section class="container community-section">
+            <h2>Community Engagement</h2>
+            <div class="community-content">
+                <div class="community-info">
+                    <h3>Submit an Event</h3>
+                    <p>Know about a sustainability event? Share it with our community!</p>
+                    <p>Your event will be reviewed and published after approval.</p>
                 </div>
-                <div class="footer-section" id="recent-posts">
-                    <h3>RECENT POSTS</h3>
-                    <ul>
-                        <li>World Sustainable Development Summit 2025<br>5-7 March, 2025</li>
-                        <li>12th Annual World Ocean Summit & Expo<br>12-13 March, 2025</li>
-                        <li>2025 UN Development Cooperation Forum<br>12-13 March, 2025</li>
-                    </ul>
-                </div>
+                <form id="eventForm" class="event-form">
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title</label>
+                        <input type="text" id="eventTitle" placeholder="Enter event title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Event Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Event Location</label>
+                        <input type="text" id="eventLocation" placeholder="Enter event location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Event Description</label>
+                        <textarea id="eventDescription" placeholder="Describe your event" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Event</button>
+                </form>
             </div>
-        </footer>
+        </section>
+    </main>
 
-        <script src="events.js"></script>
-        <!-- JS -->
-        <script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="events.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.navbar-links');
+            
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Navbar scroll effect
             window.onscroll = function () {
                 var navbar = document.getElementById("navbar");
                 if (window.scrollY > 50) {
-                    navbar.style.backgroundColor = "#39644c";
+                    navbar.classList.add("scrolled");
                 } else {
-                    navbar.style.backgroundColor = "transparent";
+                    navbar.classList.remove("scrolled");
                 }
             };
-        </script>
-
+        });
+    </script>
 </body>
 
 </html>
+
+
