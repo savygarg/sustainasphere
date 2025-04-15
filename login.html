@@ -16,23 +16,20 @@
             <a href="sustainasphere.html" class="logo" target="_blank"><img src="SUSTAINA.jpg" alt="Sustainasphere Logo"></a>
         </div>
         <ul>
-            <li><a href="about.html" target="_blank">About Us</a></li>
             <li><a href="register.html" target="_blank">Register</a></li>
             <li><a href="contact.html" target="_blank">Contact Us</a></li>
         </ul>
     </div>
+    
     <div class="box">
     <h1>Login</h1>
     <div class="loginbox">
     <div class="logincont">
         <br>
-        <form>
+        <form id="loginForm">
             <div class="input-container">
-                <img class="left" src="leftpic.jpg" alt="Left Image">
+                <img class="left" src="leftpic.png" alt="Left Image">
             <div class="formfields"><br>
-        <label for="username">Username : </label><br>
-        <input type="text" id="username" required>
-<br><br><br>
         <label for="email">Email : </label><br>
         <input type="email" id="email" required>
 <br><br><br>
@@ -40,16 +37,50 @@
         <input type="password" id="password" required>
 
     </div>
-    <img class="right" src="rightpic.jpg" alt="Right Image">
+    <img class="right" src="rightpic.png" alt="Right Image">
 </div>
 <button type="submit" class="getstart">Login</button>
-<a href="contactus.html" target="_blank">
+<a href="contact.html" target="_blank">
     <button type="button" class="help">Need help?</button>
 </a>
     </form>
     </div>
     </div><br>
     </div>
+
+    <script>
+
+document.getElementById("loginForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const response = await fetch("http://localhost:3001/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await response.json();
+    alert(data.message);
+
+    if (response.status === 200) {
+      
+      window.location.href = "home.html"; 
+    } else if (response.status === 404) {
+      window.location.href = "register.html"; 
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong! Please try again.");
+  }
+});
+
+
+    </script>
+
 </body>
 
 </html>
