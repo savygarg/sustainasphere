@@ -4,109 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Sustainashpere</title>
+    <title>Home - SustainaSphere</title>
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <meta name="description" content="SustainaSphere - Your platform for sustainable living and environmental awareness">
 </head>
 
 <body>
-    <a href="chatbot.html" target="_blank"><img src="botpic1.png" class="chat-button" alt="chatbot"></a>
-    <div class="navbar">
-        <div class="logo">SustainaSphere
-            <a href="SustainaSphere.html" target="_blank"><img src="SUSTAINA.jpg" alt="sustainasphere"></a>
+    <!-- Floating Chat Button -->
+    <a href="chatbot.html" target="_blank" class="chat-button-container">
+        <img src="botpic1.png" class="chat-button" alt="chatbot">
+        <span class="chat-tooltip">Chat with our ReBot!</span>
+    </a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="SustainaSphere.html" target="_blank">
+                <img src="SUSTAINA.jpg" alt="sustainasphere">
+                <span>SustainaSphere</span>
+            </a>
         </div>
-        <ul>
+        <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html" target="_blank">About Us</a></li>
-            <li><a href="register.html" target="_blank">Register</a></li>
+            <li><a href="chatbot.html" target="_blank">ReBot</a></li>
             <li><a href="contact.html" target="_blank">Contact Us</a></li>
         </ul>
-    </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
     <div class="block">
-    <aside class="nav2">
-        <nav><br><br><br><br>
-        <ul>
-            <li id="carbon"><a href="http://localhost:3000/" target="_blank">Carbon Footprint Calculator</a></li>
-            <li><a href="quiz.html" target="_blank">Quiz</a></li>
-            <li><a href="daily.html" target="_blank">Daily Tips</a></li>
-            <li><a href="game.html" target="_blank">Game</a></li>
-            <li><a href="events.html" target="_blank">Events</a></li>
-            <li><a href="writeups.html" target="_blank">Writeups</a></li>
-            <li><a href="ourteam.html" target="_blank">Our Team</a></li>
-        </ul></nav><br>
-    </aside><br>
+        <!-- Side Navigation -->
+        <aside class="nav2">
+            <nav><br><br>
+                <ul>
+                    <li id="carbon"><a href="carbon.html" target="_blank"><i class="fas fa-calculator"></i> Carbon Footprint Calculator</a></li>
+                    <li><a href="quiz.html"  target="_blank"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="daily.html" target="_blank"><i class="fas fa-calendar-day"></i> Daily Tips</a></li>
+                    <li><a href="game.html" target="_blank"><i class="fas fa-gamepad"></i> Game</a></li>
+                    <li><a href="events.html" target="_blank"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="writeups.html" target="_blank"><i class="fas fa-pen-fancy"></i> Writeups</a></li>
+                    <li><a href="ourteam.html" target="_blank"><i class="fas fa-users"></i> Our Team</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
         <main class="contents">
-            <h1 id="light">WHY</h1>
-            <h1 id="bold">SUSTAINASPHERE?</h1>
-            <hr color="black"><br>
-            <p>SustainaSphere is a collective effort by passionate individuals working towards a more sustainable future.<br><br> Our project focuses on tackling environmental issues, climate change, and sustainability challenges through education, awareness, and action.</p>
-<br><br>
-            <h1 id="mis">OUR MISSION</h1>
-            <hr color="black"><br>
-            <div class="content-container">
-            <p> <span>" We believe that small actions lead to big changes "</span><br><br><br>
-                SustainaSphere is all about :<br><br><br>
-                <i class="fa-solid fa-seedling"></i> Raising awareness about climate change and its impact<br><br><br>
-                <i class="fa-solid fa-leaf"></i> Encouraging sustainable practices in daily life and businesses<br><br><br>
-                <i class="fa-solid fa-recycle"></i>  Promoting environmental solutions for a cleaner, greener planet<br><br><br>
-                <i class="fa-solid fa-handshake"></i> Reducing waste through recycling, reusing, and sustainable production methods</p>
-                <img src="envi-home2.jpg" class="envi-home hidden" alt="envi"></div>
-                <br><br><br>
-            <h1 id="explore">EXPLORE SUSTAINASPHERE</h1>
-                <hr color="black"><br>
+            <section class="hero">
+                <h1 id="light">WHY</h1>
+                <h1 id="bold">SUSTAINASPHERE?</h1>
+                <hr>
+                <p class="hero-text">SustainaSphere is a collective effort by passionate individuals working towards a more sustainable future. Our project focuses on tackling environmental issues, climate change, and sustainability challenges through education, awareness, and action.</p>
+            </section>
+
+            <section class="mission">
+                <h2 id="mis">OUR MISSION</h2>
+                <hr>
                 <div class="content-container">
-                <p> <i class="fa-solid fa-book-open"></i> Blogs- Read insightful articles on sustainability and climate change<br><br><br>
-                    <i class="fa-solid fa-gamepad"></i> Carbon Footprint Game - Learn how your choices impact the planet through interactive gameplay<br><br><br>
-                    <i class="fa-solid fa-lightbulb"></i> Daily Sustainability Tips - Simple actions to live a greener life<br><br><br>
-                    <i class="fa-solid fa-globe"></i> And More! - Engaging content and tools to help you make a difference<br><br></p>
-                    <img src="envi-home.jpg" class="envi-home hidden" alt="envi"></div><br><br><br>
-                    <h1 id="join">Join Us on Our Journey! Let's work together for a greener tomorrow !!</h1>
+                    <div class="mission-content">
+                        <p class="mission-quote">"We believe that small actions lead to big changes"</p>
+                        <div class="mission-points">
+                            <div class="mission-point">
+                                <i class="fa-solid fa-seedling"></i>
+                                <span>Raising awareness about climate change and its impact</span>
+                            </div>
+                            <div class="mission-point">
+                                <i class="fa-solid fa-leaf"></i>
+                                <span>Encouraging sustainable practices in daily life and businesses</span>
+                            </div>
+                            <div class="mission-point">
+                                <i class="fa-solid fa-recycle"></i>
+                                <span>Promoting environmental solutions for a cleaner, greener planet</span>
+                            </div>
+                            <div class="mission-point">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>Reducing waste through recycling, reusing, and sustainable production methods</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="envi-home2.jpg" class="envi-home hidden" alt="Environmental sustainability illustration">
+                </div>
+            </section>
+<br>
+            <section class="explore">
+                <h2 id="explore">EXPLORE SUSTAINASPHERE</h2>
+                <hr>
+                <div class="content-container">
+                    <div class="explore-content">
+                        <div class="explore-point">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Blogs - Read insightful articles on sustainability and climate change</span>
+                        </div>
+                        <div class="explore-point">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Carbon Footprint Game - Learn how your choices impact the planet through interactive gameplay</span>
+                        </div>
+                        <div class="explore-point">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Daily Sustainability Tips - Simple actions to live a greener life</span>
+                        </div>
+                        <div class="explore-point">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>And More! - Engaging content and tools to help you make a difference</span>
+                        </div>
+                    </div>
+                    <img src="envi-home.jpg" class="envi-home hidden" alt="Environmental exploration illustration">
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2 id="join">Join Us on Our Journey!</h2>
+                <p>Let's work together for a greener tomorrow!</p>
+                <a href="register.html" target="_blank" class="cta-button">Get Started</a>
+            </section>
         </main>
     </div>
-<footer>
+
+    <!-- Footer -->
+    <footer>
         <div class="footer-container">
-        <div class="footer-section" id="navigate">
-            <h3>NAVIGATE</h3>
-            <ul>
-                <li><a href="writeups.html" target="_blank">Writeups</a></li>
-                <li><a href="events.html" target="_blank">Events</a></li>
-                <li><a href="ourteam.html" target="_blank">Our Team</a></li>
-                <li><a href="aboutus.html" target="_blank">About Us</a></li>
-            </ul>
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+            </div>
         </div>
-        <div class="footer-section" id="recent-posts">
-            <h3>RECENT POSTS</h3>
-            <ul>
-                <li>World Sustainable Development Summit 2025<br>5-7 March, 2025</li>
-                <li>12th Annual World Ocean Summit & Expo<br>12-13 March, 2025</li>
-                <li>2025 UN Development Cooperation Forum<br>12-13 March, 2025</li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Image animation on scroll
             const images = document.querySelectorAll(".envi-home");
-        
+            
             function handleScroll() {
                 images.forEach(image => {
                     const imagePosition = image.getBoundingClientRect().top;
                     const screenHeight = window.innerHeight;
-        
+                    
                     if (imagePosition < screenHeight - 100) {
                         image.classList.add("show");
                     }
                 });
             }
-        
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            // Initialize scroll handler
             window.addEventListener("scroll", handleScroll);
             handleScroll();
         });
-        </script>
-        
+    </script>
 </body>
 
 </html>
