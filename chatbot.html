@@ -4,120 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="chatbot.css" rel="stylesheet">
-    <title>Sustainable Chatbot</title>
+    <title>SustainaSphere - Eco-Friendly Chatbot</title>
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo">SustainaSphere
-            <a href="SustainaSphere.html" target="_blank"><img src="SUSTAINA.jpg" alt="sustainasphere"></a>
+    <a href="chatbot.html" ><img src="botpic1.png" class="chat-button" alt="button"></a>
+        <div class="navbar" id="navbar">
+            <div class="navbar-brand">
+                <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+                <span class="navbar-name">SustainaSphere</span>
+            </div>
+            <div class="navbar-links">
+                <a href="home.html" target="_blank"> Home</a>
+                <a href="writeups.html" target="_blank">Writeups</a>
+                <a href="events.html" target="_blank">Events</a>
+                <a href="contactus.html"target="_blank">Contact Us</a>
+            </div>
         </div>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html" target="_blank">About Us</a></li>
-            <li><a href="register.html" target="_blank">Register</a></li>
-            <li><a href="contact.html" target="_blank">Contact Us</a></li>
-        </ul>
-    </div>
-    <br><br><br>
-    <div class="blockpara"><br>
-        <h1>🌱 Welcome to Your Sustainability Chatbot!</h1><br><br><br>
-    <p> <b >"ReBot"</b> is built with the mission to spread awareness and help people adopt eco-friendly habits in their everyday lives. 
-        <br><br>
-        Living sustainably is no longer just an option but a necessity to protect our planet for future generations. <br><br>
-        <b>"ReBot"</b> is here to inspire, educate, and empower you to make meaningful changes with simple, actionable tips.
-    <br><br>
-    It can provide eco-friendly tips, share interesting facts about sustainability, and even challenge you with fun, interactive tasks to help you live greener.<br><br><br></p> 
-<h1>How to use ReBot 🌱</h1><br><br><br><p>
-<b>Step 1:</b> Start your converstaion with a normal <b>"hey" or "hello"</b>.<br><br>
-<b>Step 2: </b>Ask Questions like : <b>"How can I save water?"</b> or Get any random fact about sustainability by giving a propmt like - <b>"fact" or "tell me something"</b>.<br><br> 
-<b>Step 3: </b>Want to try an eco-friendly task? Just type <b>"challenge" or "give me a task"</b> and the chatbot will suggest one for you.<br><br>
-<b>Step 4:</b> End the converstaion by a simple <b>"bye" or "exit"</b>.<br><br><br></p>
-<h1> Ready to use Rebot ? Click below</h1><br><br><br>
-<button onclick="scrollToChat(),toggleChat()" >Start converstaion</button><br><br>
-</div>
-    <br>
-    <br>
-    <div id="chat-section" class="block">
-        <br>
-    <h1>🌱 ReBot : Sustainable Chatbot 🌱</h1>
-    <img src="botpic1.png" class="chat-button" alt="chat" scrollToChat()" onclick="toggleChat()">
-    <br><br><br>
-    <div id="chatbox-container">
-        <div id="chatbox"></div>
-        <br>
-        <input type="text" id="userInput" placeholder="Type your message..." onkeydown="handleKeyPress(event)">
-        <button onclick ="sendMessage()">Send</button>
-    </div>
-    <br><br>
-    </div>
-<br><br>
-    <footer>
-        <div class="footer-container">
+
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1> Welcome to Your Sustainability Assistant!</h1>
+                <p class="hero-description">
+                    Meet <span class="highlight">ReBot</span>, your eco-friendly companion dedicated to helping you live sustainably.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Eco Tips</h3>
+                        <p>Get personalized sustainability advice</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Daily Challenges</h3>
+                        <p>Fun tasks to make a difference</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Facts & Learning</h3>
+                        <p>Expand your eco-knowledge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chat-section" id="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Chat with ReBot</h2>
+                    <div class="chat-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Online</span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatbox">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Hello! I'm ReBot, your sustainability assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <input type="text" 
+                           id="userInput" 
+                           placeholder="Type your message here..." 
+                           onkeydown="handleKeyPress(event)">
+                    <button onclick="sendMessage()" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
         <div class="footer-section" id="navigate">
             <h3>NAVIGATE</h3>
             <ul>
                 <li><a href="writeups.html" target="_blank">Writeups</a></li>
                 <li><a href="events.html" target="_blank">Events</a></li>
-                <li><a href="ourteam.html" target="_blank">Our Team</a></li>
-                <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                <li><a href="ourteam.html"target="_blank">Our Team</a></li>
+                <li><a href="aboutus.html"target="_blank">About Us</a></li>
+                <li><a href="contactus.html"target="_blank">Contact Us</a></li>
             </ul>
         </div>
         <div class="footer-section" id="recent-posts">
             <h3>RECENT POSTS</h3>
             <ul>
-                <li>World Sustainable Development Summit 2025<br>5-7 March, 2025</li>
-                <li>12th Annual World Ocean Summit & Expo<br>12-13 March, 2025</li>
-                <li>2025 UN Development Cooperation Forum<br>12-13 March, 2025</li>
+                <li>
+                    <h4>World Sustainable Development Summit 2025</h4>
+                    <p>5-7 March, 2025</p>
+                </li>
+                <li>
+                    <h4>12th Annual World Ocean Summit & Expo</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
+                <li>
+                    <h4>2025 UN Development Cooperation Forum</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
             </ul>
         </div>
+        <div class="footer-section" id="social">
+            <h3>CONNECT WITH US</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
     </div>
 </footer>
 
     <script>
-        
-        function handleKeyPress(event) {
-    if (event.key === "Enter") {
-        sendMessage();
-    }
-}
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
 
-        function toggleChat() {
-            let chatbox = document.getElementById("chatbox-container");
-            if (chatbox.style.display === "none" || chatbox.style.display === "") {
-                chatbox.style.display = "block";
-            } else {
-                chatbox.style.display = "none";
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                sendMessage();
             }
         }
 
-        function scrollToChat() {
-            document.getElementById("chat-section").scrollIntoView({
-                behavior: "smooth"
-            });
-        }
         function sendMessage() {
-            let userInput = document.getElementById("userInput").value;
-            if (!userInput) return;
+            const userInput = document.getElementById("userInput");
+            const message = userInput.value.trim();
+            
+            if (!message) return;
 
-            let chatbox = document.getElementById("chatbox");
-            chatbox.innerHTML += `<br><br><p class="user"><b>You:</b> ${userInput}<br></p>`;
-            fetch("http://127.0.0.1:8000/?msg=" + encodeURIComponent(userInput))
+            // Add user message to chat
+            addMessage(message, 'user');
+            userInput.value = '';
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Send message to backend
+            fetch("http://127.0.0.1:8000/?msg=" + encodeURIComponent(message))
                 .then(response => response.json())
                 .then(data => {
-                    chatbox.innerHTML += `<p class="bot"><br><b>Bot:</b> <br> ${data.response}</p>`;
-                    document.getElementById("userInput").value = "";
-                    chatbox.scrollTop = chatbox.scrollHeight;
+                    // Remove typing indicator and add bot response
+                    removeTypingIndicator();
+                    addMessage(data.response, 'bot');
                 })
                 .catch(error => {
-                    chatbox.innerHTML += `<p class="bot" style="color: red;">Error: Could not connect to chatbot.</p>`;
+                    removeTypingIndicator();
+                    addMessage("Sorry, I'm having trouble connecting right now. Please try again later.", 'bot error');
                     console.error("Error:", error);
                 });
         }
-    </script>
 
+        function addMessage(text, sender) {
+            const chatbox = document.getElementById("chatbox");
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = `<p>${text}</p>`;
+            
+            messageDiv.appendChild(contentDiv);
+            chatbox.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const chatbox = document.getElementById("chatbox");
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot-message typing';
+            typingDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+            chatbox.appendChild(typingDiv);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typingIndicator = document.querySelector('.typing');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+    </script>
 </body>
 
 </html>
