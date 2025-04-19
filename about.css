@@ -1,9 +1,28 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --dark-green: #013220;
+    --light-green: #39644c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --dark-bg: #2c3e50;
+    --cream: #fdf6ec;
+    --transition: all 0.3s ease;
+}
+
 body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 
 .pic{
     background-image: url(bg3.2.JPG);
@@ -126,7 +145,6 @@ button{
 button:hover{
     background-color: #6a7d66ec;
 }
-/* our vision wala part */
 
 .box{
     width: 80%;        
@@ -164,7 +182,7 @@ button:hover{
     overflow: hidden;
     background: white;
     padding: 0 15px;
-    font-size: 16px;
+    font-size: 18px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -184,100 +202,102 @@ button:hover{
 }
 
 
- 
-/* teams */
-
-/* .team-section {
-    padding: 50px 20px;
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 185px;
+    width: 110px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.team-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #2F5435;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.chat-button:hover {
+    transform: scale(1.1);
 }
-
-.team-section h2::before {
-    
-    width: 50px;
-    height: 3px;
-    background: #2F5435;
-    display: inline-block;
-}
-
-.team-section h2 span {
-    font-weight: bold;
-}
-
-/* Team Members */
-/* .team-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.team-member {
-    width: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.team-member img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}  */
-
 
 
 
 /* Footer */
-
-.footer-container {
-    display: flex;
-    justify-content:space-between;
-    padding: 100px;
-    background-color: #39644c; 
+footer {
+    font-family: "Nova Round", serif;
+    background: var(--dark-green);
     color: white;
-    width:100%;
-    height:300px;
+    padding: 4rem 5% 2rem;
 }
 
-.footer-section {
-    width:85%;
-    font-size: small;
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .footer-section h3 {
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
 }
 
 .footer-section ul {
-    font-size: larger;
     list-style: none;
-    margin-bottom: 10px;
-    padding: 0;
-    font-family: "Nova Round", serif;
 }
 
 .footer-section li {
-    margin-bottom: 10px;
+    font-family:  "Nova Round", serif;
+    margin-bottom: 1rem;
 }
 
-.footer-section ul li a {
-    color: white;
+.footer-section a {
+    color: #ecf0f1;
     text-decoration: none;
+    transition: var(--transition);
 }
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
 .about-container {
     display: flex;
     justify-content: space-between;
@@ -305,6 +325,7 @@ button:hover{
 }
 
 .service-item {
+    font-size: 16px;
     width: 45%;
     padding: 10px;
     color: #2d5c42;
@@ -312,7 +333,7 @@ button:hover{
 }
 
 .service-item h3 {
-    font-size: 1.2em;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 5px;
 }
