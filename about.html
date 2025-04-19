@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - SustainaSphere</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <a href="chatbot.html" ><img src="botpic1.png" class="chat-button" alt="button"></a>
     <!-- header -->
     <div class="pic">
         <div class="navbar" id="navbar">
@@ -20,7 +21,6 @@
             <div class="navbar-links">
                 <a href="home.html">Home</a>
                 <a href="ourteam.html">Our Team</a>
-                <a href="register.html">Register</a>
                 <a href="contactus.html">Contact Us</a>
             </div>
         </div>
@@ -64,7 +64,7 @@
                     habits, learning eco-friendly practices, or seeking sustainable solutions, SustainaSphere is here to
                     help. Join us in making sustainability a way of life!</p>
             </div>
-        </div>
+        </div> 
     </section>
 
     <!-- box wala part -->
@@ -109,74 +109,73 @@
     <!-- javascript for box -->
     <script>
         document.querySelectorAll('.box-head').forEach(header => {
-            header.addEventListener('click', function () {
+            header.addEventListener('click', function() {
                 const item = this.parentElement;
                 item.classList.toggle('active');
             });
         });
     </script>
 
-    <!-- teams -->
-
-    <!-- <section class="team-section">
-        <h2>OUR <span>TEAM</span></h2>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="team-member1.jpg" alt="Team Member 1">
-            </div>
-            <div class="team-member">
-                <img src="team-member2.jpg" alt="Team Member 2">
-            </div>
+<br><br><br>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section" id="navigate">
+            <h3>NAVIGATE</h3>
+            <ul>
+                <li><a href="writeups.html" target="_blank">Writeups</a></li>
+                <li><a href="events.html" target="_blank">Events</a></li>
+                <li><a href="ourteam.html" target="_blank">Our Team</a></li>
+                <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                <li><a href="contactus.html" target="_blank">Contact Us</a></li>
+            </ul>
         </div>
-    </section> -->
-    <!-- javasciprt for team -->
-    <!-- /* Responsive */
-    @media (max-width: 768px) {
-        .team-container {
-            flex-direction: column;
-            align-items: center;
+        <div class="footer-section" id="recent-posts">
+            <h3>RECENT POSTS</h3>
+            <ul>
+                <li>
+                    <h4>World Sustainable Development Summit 2025</h4>
+                    <p>5-7 March, 2025</p>
+                </li>
+                <li>
+                    <h4>12th Annual World Ocean Summit & Expo</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
+                <li>
+                    <h4>2025 UN Development Cooperation Forum</h4>
+                    <p>12-13 March, 2025</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-section" id="social">
+            <h3>CONNECT WITH US</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+    </div>
+</footer>
+
+    
+
+ <!-- JS -->
+ <script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = "#39644c";
+        } else {
+            navbar.style.backgroundColor = "transparent";
         }
-    } -->
-
-    <br><br><br>
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section" id="navigate">
-                <h3>NAVIGATE</h3>
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                    <li><a href="services">OUR OFFER</a></li>
-                    <li><a href="ourteam.html">OUR TEAM</a></li>
-                    <li><a href="news">NEWS</a></li>
-                    <li><a href="contactus.html">CONTACT US</a></li>
-                </ul>
-            </div>
-            <div class="footer-section" id="recent-posts">
-                <h3>RECENT POSTS</h3>
-                <ul>
-                    <li>World Sustainable Development Summit 2025<br>5-7 March, 2025</li>
-                    <li>12th Annual World Ocean Summit & Expo<br>12-13 March, 2025</li>
-                    <li>2025 UN Development Cooperation Forum<br>12-13 March, 2025</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- JS -->
-    <script>
-        window.onscroll = function () {
-            var navbar = document.getElementById("navbar");
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = "#39644c";
-            } else {
-                navbar.style.backgroundColor = "transparent";
-            }
-        };
-    </script>
+    };
+</script> 
 
 </body>
-
 </html>
