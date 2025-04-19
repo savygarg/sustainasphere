@@ -68,7 +68,10 @@ body {
 }
 
 .nav-links a:hover {
+    background-color: #fff;
     color: #2e8b57;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .auth-links .login-btn:hover {
@@ -170,9 +173,6 @@ body {
 
 .registration-form input[type="submit"]:hover,
 .registration-form input[type="reset"]:hover {
-    background-color: #236a4b;
+    background-color: rgba(255, 255, 255, 0.64);
+    color: #236a4b;
 }
-
-/* 679b7e 
-
-  013220  */
