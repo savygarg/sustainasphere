@@ -14,15 +14,15 @@
             <div class="navbar">
                 <a href="sustainasphere.html" class="logo" target="_blank"><img src="SUSTAINA.jpg" alt="Sustainasphere Logo"></a>
                 <div class="nav-links">
-                    <a href="contact.html" target="_blank">Contact Us</a>
+                    <a href="contactus.html" target="_blank">Contact Us</a>
                 </div>
                 <div class="auth-links">
                     <a href="login.html" class="login-btn" target="_blank">Login</a>
-                    <a href="register.html" class="register-btn active">Register</a>
                 </div>
             </div>
         </nav>
         <div class="main-content">
+            <form id="registerForm">
             <div class="registration-form">
                 <h1>Register</h1>
                 <label for="firstName">First Name: </label>
@@ -45,9 +45,43 @@
                 <input type="submit" id="submit" value="Get Started">
                 <input type="reset" id="reset" value="Reset"><br><br>
             </div>
+            </form>
         </div>
     </div>
-
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const contactNumber = document.getElementById("number").value;
+            const userType = document.getElementById("user").value;
+            const data = { firstName, lastName, email, password, contactNumber, userType };
+            try {
+                
+                const response = await fetch("http://localhost:3001/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                });
+    
+                if (response.ok) {
+                    const result = await response.text();
+                    alert(result); 
+                    window.location.href = "home.html"; 
+                } else {
+                    const errorMessage = await response.text();
+                    alert(`Error: ${errorMessage}`);
+                }
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                alert("Something went wrong. Please try again later.");
+            }
+        });
+    </script>
     
 
 </body>
