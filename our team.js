@@ -4,7 +4,7 @@ window.onscroll = function() {
     if (window.scrollY > 50) {
         navbar.style.backgroundColor = "#39644c";
     } else {
-        navbar.style.backgroundColor = "transparent";
+        navbar.style.backgroundColor = "#39644c";
     }
 };
 
@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
+}); 
 
 // Team members animation on scroll
 document.addEventListener('DOMContentLoaded', function() {
