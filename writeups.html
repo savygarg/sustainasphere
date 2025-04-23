@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainaSphere - Writeups & Blogs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="writeups.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore sustainability insights, stories, and guides on SustainaSphere's blog.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Floating Particles Background */
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+             background: rgba(255, 255, 255, 0.07); 
+           
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 15s linear infinite;
+        }
+
+        .bubble:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            left: 35%;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 18px;
+            height: 18px;
+            left: 50%;
+            animation-delay: 6s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 22px;
+            height: 22px;
+            left: 65%;
+            animation-delay: 8s;
+        }
+
+        .bubble:nth-child(6) {
+            width: 16px;
+            height: 16px;
+            left: 80%;
+            animation-delay: 10s;
+        }
+
+        .bubble:nth-child(7) {
+            width: 19px;
+            height: 19px;
+            left: 90%;
+            animation-delay: 12s;
+        }
+
+        .bubble:nth-child(8) {
+            width: 14px;
+            height: 14px;
+            left: 15%;
+            animation-delay: 14s;
+        }
+
+        .bubble:nth-child(9) {
+            width: 17px;
+            height: 17px;
+            left: 30%;
+            animation-delay: 16s;
+        }
+
+        .bubble:nth-child(10) {
+            width: 21px;
+            height: 21px;
+            left: 45%;
+            animation-delay: 18s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                bottom: -100px;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+                bottom: 100vh;
+            }
+        }
+
+        /* Navbar and Chatbot Positioning */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(14, 46, 30, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            z-index: 1000;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Adjust content spacing to account for fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Blog Header Content Layout */
+        .blog-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 15px;
+            font-family: 'Nova Round', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-header p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            max-width: 800px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .search-container input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-container button {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-container button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .blog-header p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+
+            .search-container {
+                width: 95%;
+                flex-direction: row;
+                padding: 5px;
+            }
+        }
+
+        body {
+            position: relative;
+        }
+
+        /* Newsletter Signup */
+        .newsletter-signup {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .newsletter-signup h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-signup p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .newsletter-form button {
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="floating-bg">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <a href="chatbot.html" target="_blank"><img src="botpic1.png" class="chat-button" alt="chatbot"></a>    
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="navbar-brand">
+            <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+            <span class="navbar-name">SustainaSphere</span>
+        </div>
+        <div class="navbar-links">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="aboutus.html" target="_blank">About Us</a>
+            <a href="contactus.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1>Writeups & Blogs</h1>
+        <p>Explore our collection of sustainability insights, stories, and guides</p>
+        <div class="search-container">
+            <input type="text" placeholder="Search articles..." id="search-input">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+   
+
+    <!-- Featured Post -->
+    <div class="featured-post">
+        <div class="featured-content">
+            <span class="category-tag"><i class="fas fa-star"></i> Featured</span>
+            <h2>The Future of Sustainable Living: 2025 Trends to Watch</h2>
+            <p class="post-meta">By Sarah Green | March 15, 2025 | 5 min read</p>
+            <p class="post-excerpt">Discover the latest innovations and trends shaping the future of sustainable living, from AI-powered energy management to zero-waste communities. Learn how these advancements are making eco-friendly choices easier and more accessible for everyone.</p>
+            <div class="post-tags">
+               
+            </div>
+            <a href="sustainable-living-2025.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid">
+        <!-- News & Trends -->
+        <article class="blog-card" data-category="news">
+            <div class="card-image">
+                <img src="cf.jpg" alt="Climate Technology">
+                <span class="reading-time"><i class="fas fa-clock"></i> 4 min</span>
+            </div>
+            <div class="card-content">
+                <span class="category-tag">News & Trends</span>
+                <h3>Breakthrough in Carbon Capture Technology</h3>
+                <p class="post-meta">By John Eco | March 14, 2025</p>
+                <p class="post-excerpt">Scientists develop revolutionary carbon capture method that could help combat climate change.</p>
+                <div class="card-footer">
+                    <div class="post-tags">
+                        
+                    </div>
+                    <a href="carbon-capture-article.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Eco-Lifestyle -->
+        <article class="blog-card" data-category="lifestyle">
+            <div class="card-image">
+                <img src="zerowaste.png" alt="Zero Waste Living">
+                <span class="reading-time"><i class="fas fa-clock"></i> 6 min</span>
+            </div>
+            <div class="card-content">
+                <span class="category-tag">Eco-Lifestyle</span>
+                <h3>Zero Waste Living: A Beginner's Guide</h3>
+                <p class="post-meta">By Maria Sustainable | March 13, 2025</p>
+                <p class="post-excerpt">Practical tips and tricks for reducing waste in your daily life, from kitchen to bathroom.</p>
+                <div class="card-footer">
+                    <div class="post-tags">
+                        
+                    </div>
+                    <a href="zero-waste-article.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Carbon Footprint -->
+        <article class="blog-card" data-category="carbon">
+            <div class="card-image">
+                <img src="carbonfootprints.png" alt="Carbon Footprint">
+                <span class="reading-time"><i class="fas fa-clock"></i> 5 min</span>
+            </div>
+            <div class="card-content">
+                <span class="category-tag">Carbon Footprint</span>
+                <h3>Understanding Your Digital Carbon Footprint</h3>
+                <p class="post-meta">By Tech Green | March 12, 2025</p>
+                <p class="post-excerpt">How your online activities impact the environment and what you can do to reduce your digital carbon footprint.</p>
+                <div class="card-footer">
+                    <div class="post-tags">
+                      
+                    </div>
+                    <a href="digital-carbon-article.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Feature Stories -->
+        <article class="blog-card" data-category="stories">
+            <div class="card-image">
+                <img src="community.png" alt="Community Story">
+                <span class="reading-time"><i class="fas fa-clock"></i> 7 min</span>
+            </div>
+            <div class="card-content">
+                <span class="category-tag">Feature Stories</span>
+                <h3>How One Community Transformed Their Neighborhood</h3>
+                <p class="post-meta">By Lisa Community | March 11, 2025</p>
+                <p class="post-excerpt">The inspiring story of a community that came together to create a sustainable living space.</p>
+                <div class="card-footer">
+                    <div class="post-tags">
+                        
+                    </div>
+                    <a href="community-transformation-article.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="newsletter-signup">
+        <h3>Stay Updated</h3>
+        <p>Get the latest sustainability insights delivered to your inbox</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Popular Topics -->
+    <div class="popular-topics">
+        <h3>Popular Topics</h3>
+        <div class="topic-tags">
+            <a href="#" class="topic-tag">Climate Change</a>
+            <a href="#" class="topic-tag">Renewable Energy</a>
+            <a href="#" class="topic-tag">Zero Waste</a>
+            <a href="#" class="topic-tag">Sustainable Fashion</a>
+            <a href="#" class="topic-tag">Green Technology</a>
+            <a href="#" class="topic-tag">Eco-Friendly Products</a>
+            <a href="#" class="topic-tag">Sustainable Agriculture</a>
+            <a href="#" class="topic-tag">Ocean Conservation</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="writeups.js"></script>
+</body>
+</html> 
