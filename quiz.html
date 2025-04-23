@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainaSphere - How Green Are You?</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Test your sustainability knowledge with SustainaSphere's interactive quiz. Discover how green you are!">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="chatbot.html" target="_blank"><img src="botpic1.png" class="chat-button" alt="chatbot"></a>    
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="navbar-brand">
+            <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+            <span class="navbar-name">SustainaSphere</span>
+        </div>
+        <div class="navbar-links">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="aboutus.html" target="_blank">About Us</a>
+            <a href="contactus.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+    
+
+    <!-- Progress Level Section -->
+    <!-- <div class="progress-level-section">
+        <h2 class="progress-level-title">Your Progress Level</h2>
+        <div class="level-buttons">
+            <div class="level-button active" data-level="1">
+                <div class="level-number">Level 1</div>
+                <div class="level-name">Rookie Spark</div>
+            </div>
+            <div class="level-button" data-level="2">
+                <div class="level-number">Level 2</div>
+                <div class="level-name">Rising Flame</div>
+            </div>
+            <div class="level-button" data-level="3">
+                <div class="level-number">Level 3</div>
+                <div class="level-name">Brainstormer</div>
+            </div>
+        </div>
+        <div class="level-progress-container">
+            <div class="level-progress-bar"></div>
+        </div>
+    </div> -->
+
+    <!-- Quiz Banner -->
+    <div class="quiz-banner">
+        <h1>How Green Are You?</h1>
+        <p>Test your knowledge on sustainability and discover how your daily choices impact our planet! Learn while you play.</p>
+        <div class="banner-badges">
+            <div class="badge">
+                <i class="fas fa-award"></i>
+                <span>Earn Badges</span>
+            </div>
+            <div class="badge">
+                <i class="fas fa-trophy"></i>
+                <span>Compete</span>
+            </div>
+            <div class="badge">
+                <i class="fas fa-leaf"></i>
+                <span>Learn</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="progress-level-section">
+        <h2 class="progress-level-title">Your Progress Level</h2>
+        <div class="level-buttons">
+            <div class="level-button active" data-level="1">
+                <div class="level-number">Level 1</div>
+                <div class="level-name"><i class="fas fa-seedling"></i> Rookie Spark</div>
+            </div>
+            <div class="level-button" data-level="2">
+                <div class="level-number">Level 2</div>
+                <div class="level-name"><i class="fas fa-fire"></i> Rising Flame</div>
+            </div>
+            <div class="level-button" data-level="3">
+                <div class="level-number">Level 3</div>
+                <div class="level-name"><i class="fas fa-brain"></i> Brainstormer</div>
+            </div>
+        </div>
+        <div class="level-progress-container">
+            <div class="level-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Selection -->
+    <div class="quiz-selection">
+        <div class="category-selection">
+            <h2>Select Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="sdgs">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Sustainable Development Goals</h3>
+                    <p>Test your knowledge of the UN's SDGs</p>
+                </div>
+                <div class="category-card" data-category="carbon">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Carbon Footprint & Daily Habits</h3>
+                    <p>Learn about your environmental impact</p>
+                </div>
+                <div class="category-card" data-category="eco">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>Discover sustainable living tips</p>
+                </div>
+                <div class="category-card" data-category="climate">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Climate Change Facts</h3>
+                    <p>Test your climate science knowledge</p>
+                </div>
+                <div class="category-card" data-category="tech">
+                    <i class="fas fa-solar-panel"></i>
+                    <h3>Sustainable Living & Green Tech</h3>
+                    <p>Explore eco-friendly innovations</p>
+                </div>
+                <div class="category-card" data-category="resources">
+                    <i class="fas fa-tint"></i>
+                    <h3>Water, Energy, and Waste Management</h3>
+                    <p>Learn about resource conservation</p>
+                </div>
+                <div class="category-card" data-category="myths">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>True or False Myths</h3>
+                    <p>Separate fact from fiction</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="difficulty-selection">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">
+                    <i class="fas fa-baby"></i>
+                    <span>Easy</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="medium">
+                    <i class="fas fa-user"></i>
+                    <span>Medium</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="hard">
+                    <i class="fas fa-user-ninja"></i>
+                    <span>Hard</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- <div class="quiz-options">
+            <label class="timer-toggle">
+                <input type="checkbox" id="timer-toggle" checked>
+                <span>Enable Timer</span>
+            </label>
+            <label class="sound-toggle">
+                <input type="checkbox" id="sound-toggle" checked>
+                <span>Enable Sound</span>
+            </label>
+        </div> -->
+        
+        <button class="btn-primary start-quiz-btn">
+            <i class="fas fa-play"></i> Start Quiz
+        </button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container" style="display: none;">
+        <div class="quiz-box">
+            <div class="quiz-header">
+                <div class="quiz-stats">
+                    <div class="streak-counter">
+                        <i class="fas fa-fire"></i>
+                        <span>0</span> Day Streak
+                    </div>
+                    <div class="total-quizzes">
+                        <i class="fas fa-trophy"></i>
+                        <span>0</span> Quizzes Taken
+                    </div>
+                </div>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span>0:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2>Question <span id="current-question">1</span> of <span id="total-questions">10</span></h2>
+                <p id="question-text">Loading question...</p>
+                <div id="question-image" class="question-image" style="display: none;">
+                    <img src="" alt="Question Image">
+                </div>
+            </div>
+
+            <div class="options-container">
+                <!-- Options will be loaded dynamically -->
+            </div>
+
+            <div class="feedback-container" style="display: none;">
+                <div class="feedback-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p class="feedback-text">Correct! Reducing meat consumption significantly lowers your carbon footprint.</p>
+            </div>
+
+            <div class="quiz-controls">
+                <button class="prev-btn" disabled>Previous</button>
+                <button class="next-btn">Next</button>
+                <button class="submit-btn" style="display: none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div class="results-container" style="display: none;">
+        <div class="results-header">
+            <h2>Quiz Complete!</h2>
+            <div class="result-badge">
+                <i class="fas fa-award"></i>
+                <span id="result-title">Eco Noob</span>
+            </div>
+        </div>
+        
+        <div class="score-summary">
+            <div class="score-circle">
+                <div class="score-value">
+                    <span id="score-value">0</span>/<span id="total-questions">10</span>
+                </div>
+                <div class="score-label">Your Score</div>
+            </div>
+            <div class="score-details">
+                <p>Time Taken: <span id="time-taken">0:00</span></p>
+                <p>Correct Answers: <span id="correct-answers">0</span></p>
+                <p>Accuracy: <span id="accuracy">0%</span></p>
+            </div>
+        </div>
+        
+        <div class="earned-badges">
+            <h3>Badges Earned</h3>
+            <div class="badges-container">
+                <!-- Badges will be added dynamically -->
+            </div>
+        </div>
+        
+        
+            <button class="btn-primary try-another-btn">
+                <i class="fas fa-redo"></i> Try Another Quiz
+            </button>
+        </div>
+        
+        <!-- <div class="challenge-section">
+            <h3>Take the Next Challenge</h3>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <i class="fas fa-recycle"></i>
+                    <h4>Plastic-Free Challenge</h4>
+                    <p>7 days without single-use plastic</p>
+                    <button class="btn-secondary">Join Challenge</button>
+                </div>
+                <div class="challenge-card">
+                    <i class="fas fa-bicycle"></i>
+                    <h4>Car-Free Week</h4>
+                    <p>7 days of sustainable transportation</p>
+                    <button class="btn-secondary">Join Challenge</button>
+                </div>
+                <div class="challenge-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Energy Saver</h4>
+                    <p>Reduce your energy consumption by 20%</p>
+                    <button class="btn-secondary">Join Challenge</button>
+                </div>
+            </div>
+        </div> -->
+    
+
+    <!-- Leaderboard Modal -->
+    <div class="modal" id="leaderboard-modal">
+        <div class="modal-content">
+            <h2>Leaderboard</h2>
+            <div class="leaderboard-filters">
+                <select id="leaderboard-category">
+                    <option value="all">All Categories</option>
+                    <option value="sdgs">Sustainable Development Goals</option>
+                    <option value="carbon">Carbon Footprint</option>
+                    <option value="eco">Eco-Friendly Practices</option>
+                    <option value="climate">Climate Change</option>
+                    <option value="tech">Green Tech</option>
+                    <option value="resources">Resource Management</option>
+                    <option value="myths">True or False Myths</option>
+                </select>
+                <select id="leaderboard-timeframe">
+                    <option value="all">All Time</option>
+                    <option value="monthly">This Month</option>
+                    <option value="weekly">This Week</option>
+                </select>
+            </div>
+            <div class="leaderboard-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>User</th>
+                            <th>Score</th>
+                            <th>Quizzes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard data will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Quiz of the Month Modal -->
+    <div class="modal" id="quiz-of-month-modal">
+        <div class="modal-content">
+            <h2>Quiz of the Month</h2>
+            <div class="quiz-of-month-content">
+                <div class="quiz-of-month-image">
+                    <img src="images/ocean-plastic.jpg" alt="Ocean Plastic Quiz">
+                </div>
+                <div class="quiz-of-month-details">
+                    <h3>Ocean Plastic Crisis</h3>
+                    <p>Test your knowledge about the global plastic pollution crisis affecting our oceans and marine life.</p>
+                    <div class="quiz-of-month-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>1,245</span> participants
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span> average rating
+                        </div>
+                    </div>
+                    <button class="btn-primary">Take This Quiz</button>
+                </div>
+            </div>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="quiz.js"></script>
+</body>
+</html> 
