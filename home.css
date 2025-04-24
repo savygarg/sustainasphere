@@ -71,7 +71,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #39644c;
+    background: var(--dark-green);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -115,7 +115,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #1a2d23;
+    color: var(--primary-color);
 }
 
 .hamburger {
@@ -142,7 +142,7 @@ body {
 /* Side Navigation */
 .nav2 {
     width: 220px;
-    background: #39644c;
+    background: var(--dark-green);
     padding: 2rem 0;
 }
 
@@ -178,7 +178,7 @@ body {
 }
 
 .nav2 a:hover i {
-    color: #1a2d23;
+    color: #537c66;
 }
 
 /* Main Content */
