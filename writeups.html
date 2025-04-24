@@ -128,21 +128,22 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .chat-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            z-index: 1000;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
 
-        .chat-button:hover {
-            transform: scale(1.1);
-        }
+        .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 190px;
+    width: 110px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+
 
         /* Adjust content spacing to account for fixed navbar */
         body {
@@ -318,7 +319,7 @@
         <div class="bubble"></div>
     </div>
 
-    <a href="chatbot.html" target="_blank"><img src="botpic1.png" class="chat-button" alt="chatbot"></a>    
+    <a href="chatbot.html" ><img src="botpic1.png" class="chat-button" alt="button"></a>
 
     <!-- Navbar -->
     <div class="navbar" id="navbar">
@@ -329,7 +330,7 @@
         <div class="navbar-links">
             <a href="home.html" target="_blank">Home</a>
             <a href="aboutus.html" target="_blank">About Us</a>
-            <a href="contactus.html" target="_blank">Contact Us</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
         </div>
     </div>
 
@@ -519,4 +520,4 @@
 
     <script src="writeups.js"></script>
 </body>
-</html> 
+</html>
