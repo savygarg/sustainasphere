@@ -157,7 +157,7 @@ body {
 }
 
 .navbar-links a:hover {
-    color: #013220;
+    color: var(--primary-color);
 }
 
 .content {
@@ -552,7 +552,7 @@ footer {
     }
 }
 
-.team-member {
+.team-member { 
     animation: fadeInUp 0.6s ease forwards;
     opacity: 0;
 }
