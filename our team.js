@@ -2,9 +2,9 @@
 window.onscroll = function() {
     var navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = "#39644c";
+        navbar.style.backgroundColor = "#013320";
     } else {
-        navbar.style.backgroundColor = "#39644c";
+        navbar.style.backgroundColor = "#013320";
     }
 };
 
@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const bannerText = document.querySelector('.team-banner h1');
     if (bannerText) {
         bannerText.style.opacity = '1';
-        bannerText.style.transform = 'translateX(0)';
+        bannerText.style.transform = 'translateX(0)'; 
     }
 });
 
