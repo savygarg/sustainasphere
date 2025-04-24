@@ -80,10 +80,9 @@ body {
 }
 
 .navbar-links a:hover {
-    color: #013220;
+    color: var(--primary-light);
 }
 
-/* Chat Button */
 .chat-button {
     position: fixed;
     bottom: 20px;
@@ -542,7 +541,7 @@ body {
 
 /* Footer Styles */
 footer {
-    background-color: #2d6a4f;
+    background-color: #013220;
     color: white;
     padding: 50px 0 20px;
     margin-top: 50px;
@@ -773,4 +772,4 @@ footer {
   } */
   
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
