@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Waste Living: A Beginner's Guide - SustainaSphere</title>
+    <link rel="stylesheet" href="writeups.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #103d1f;
+            --secondary-color: #e6f4ea;
+            --text-dark: #fffdfd;
+            --text-light: #ffffff;
+            --background-light: #f9f9f9;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Open Sans', sans-serif;
+            --font-accent: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url(desgin4.jpg);
+            color: var(--text-light);
+            line-height: 1.6;
+            font-family: var(--font-body);
+        }
+
+        .article-container {
+            max-width: 1200px;
+            margin: 120px auto 0;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .article-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article-header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .article-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            color: white;
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-accent);
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 30px;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.3px;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            font-family: var(--font-body);
+        }
+
+        .article-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .article-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article-section h2 {
+            font-family: var(--font-heading);
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .article-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .key-points {
+            background: linear-gradient(135deg, rgba(16, 61, 31, 0.8), rgba(230, 244, 234, 0.2));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+            font-family: var(--font-body);
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-points li {
+            font-family: var(--font-accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(16, 61, 31, 0.6), rgba(230, 244, 234, 0.1));
+            color: var(--text-light);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+
+        .key-points li:hover {
+            transform: translateX(10px);
+        }
+
+        .key-points i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, rgba(16, 61, 31, 0.8), rgba(230, 244, 234, 0.2));
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+            font-style: italic;
+            position: relative;
+            color: var(--text-light);
+            box-shadow: var(--shadow);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(230, 244, 234, 0.2);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .back-to-blogs {
+            font-family: var(--font-accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            letter-spacing: 0.5px;
+        }
+
+        .back-to-blogs:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2.5rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .article-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .quote-box {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="navbar-brand">
+            <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+            <span class="navbar-name">SustainaSphere</span>
+        </div>
+        <div class="navbar-links">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="aboutus.html" target="_blank">About Us</a>
+            <a href="contactus.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <header class="article-header">
+            <img src="zerowaste.png" alt="Zero Waste Living" class="article-banner">
+            <div class="header-content">
+                <h1 class="article-title">Zero Waste Living: A Beginner's Guide</h1>
+                <p class="article-subtitle">Practical tips and tricks for reducing waste in your daily life, from kitchen to bathroom</p>
+            </div>
+        </header>
+
+        <article class="article-content">
+            <section class="article-section">
+                <h2>Introduction</h2>
+                <p>Embarking on a zero waste journey might seem daunting at first, but it's actually about making small, sustainable changes that add up to make a big difference. This guide is designed to help beginners take their first steps toward a more sustainable lifestyle, one change at a time.</p>
+            </section>
+
+            <section class="article-section">
+                <h2>What is Zero Waste?</h2>
+                <p>Zero waste is a philosophy that encourages the redesign of resource life cycles so that all products are reused, and nothing is sent to landfills or incinerators. It's about making conscious choices to reduce our environmental footprint and live more sustainably.</p>
+            </section>
+
+            <section class="article-section">
+                <h2>The 5 R's of Zero Waste</h2>
+                <div class="key-points">
+                    <ul>
+                        <li>
+                            <i class="fas fa-ban"></i>
+                            <span>Refuse: Say no to single-use plastics and unnecessary items</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-minus-circle"></i>
+                            <span>Reduce: Minimize consumption and waste production</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-recycle"></i>
+                            <span>Reuse: Find new purposes for items instead of throwing them away</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-recycle"></i>
+                            <span>Recycle: Properly sort and recycle materials when possible</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <span>Rot: Compost organic waste to return nutrients to the earth</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2>Practical Changes You Can Make Today</h2>
+                <h3>In the Kitchen</h3>
+                <div class="key-points">
+                    <ul>
+                        <li>
+                            <i class="fas fa-utensils"></i>
+                            <span>Use reusable containers for food storage</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Bring your own bags and containers when shopping</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-coffee"></i>
+                            <span>Switch to reusable coffee filters and tea strainers</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>In the Bathroom</h3>
+                <div class="key-points">
+                    <ul>
+                        <li>
+                            <i class="fas fa-tooth"></i>
+                            <span>Use bamboo toothbrushes and refillable dental floss</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-pump-soap"></i>
+                            <span>Choose bar soap and shampoo instead of bottled products</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-toilet-paper"></i>
+                            <span>Switch to recycled or bamboo toilet paper</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>On the Go</h3>
+                <div class="key-points">
+                    <ul>
+                        <li>
+                            <i class="fas fa-mug-hot"></i>
+                            <span>Carry a reusable water bottle and coffee cup</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-utensils"></i>
+                            <span>Pack reusable cutlery and straws</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Keep reusable bags in your car or bag</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2>Why It Matters</h2>
+                <p>The average person generates about 4.4 pounds of waste per day. By adopting zero waste practices, we can significantly reduce our environmental impact and contribute to a healthier planet for future generations.</p>
+                
+                <div class="quote-box">
+                    "The greatest threat to our planet is the belief that someone else will save it." - Robert Swan
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2>Final Thoughts</h2>
+                <p>Remember, zero waste living is not about perfection. It's about progress and making conscious choices that align with your values. Start small, celebrate your successes, and don't be too hard on yourself. Every small change makes a difference.</p>
+            </section>
+
+            <a href="writeups.html" class="back-to-blogs">
+                <i class="fas fa-arrow-left"></i> Back to Blogs
+            </a>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fade-in animation for article container
+        document.addEventListener('DOMContentLoaded', () => {
+            const articleContainer = document.querySelector('.article-container');
+            articleContainer.classList.add('visible');
+
+            // Intersection Observer for section animations
+            const sections = document.querySelectorAll('.article-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

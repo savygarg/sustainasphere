@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakthrough in Carbon Capture Technology - SustainaSphere</title>
+    <link rel="stylesheet" href="writeups.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #4CAF50;
+            --text-dark: #fffdfd;
+            --text-light: #ffffff;
+            --background-light: #f9f9f9;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Open Sans', sans-serif;
+            --font-accent: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: url(desgin4.jpg);
+            font-family: var(--font-body);
+        }
+
+        .article-container {
+            max-width: 1200px;
+            margin: 120px auto 0;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .article-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article-header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .article-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            color: white;
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .article-subtitle {
+            font-family: var(--font-accent);
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 30px;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.3px;
+        }
+
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            font-family: var(--font-body);
+        }
+
+        .article-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .article-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .article-section h2 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+            letter-spacing: 0.3px;
+        }
+
+        .article-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .key-points {
+            background: linear-gradient(135deg, #f5f5f5, #ffffff);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            font-family: var(--font-body);
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-points li {
+            font-family: var(--font-accent);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #82b488, #ffffff);
+            color: black;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+
+        .key-points li:hover {
+            transform: translateX(10px);
+        }
+
+        .key-points i {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--secondary-color), #e0f0e0);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+            font-style: italic;
+            position: relative;
+            color: rgb(9, 0, 0);
+            box-shadow: var(--shadow);
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .back-to-blogs {
+            font-family: var(--font-accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            letter-spacing: 0.5px;
+        }
+
+        .back-to-blogs:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2.5rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .article-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .quote-box {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="navbar-brand">
+            <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+            <span class="navbar-name">SustainaSphere</span>
+        </div>
+        <div class="navbar-links">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="aboutus.html" target="_blank">About Us</a>
+            <a href="contactus.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <header class="article-header">
+            <img src="carbonbanner.jpg" alt="Carbon Capture Technology" class="article-banner">
+            <div class="header-content">
+                <h1 class="article-title">Breakthrough in Carbon Capture Technology</h1>
+                <p class="article-subtitle">Scientists develop revolutionary carbon capture method that could help combat climate change.</p>
+            </div>
+        </header>
+
+        <article class="article-content">
+            <section class="article-section">
+                <h2>Introduction</h2>
+                <p>As the world grapples with the escalating climate crisis, innovative solutions are emerging to address one of our most pressing challenges: reducing atmospheric carbon dioxide. The latest breakthrough in carbon capture technology represents a significant step forward in our ability to mitigate climate change and transition to a more sustainable future.</p>
+            </section>
+
+            <section class="article-section">
+                <h2>What is Carbon Capture?</h2>
+                <p>Carbon capture technology refers to methods designed to capture carbon dioxide emissions from sources like power plants and industrial processes, or directly from the atmosphere. This captured CO2 can then be stored underground or utilized in various industrial applications, preventing it from contributing to global warming.</p>
+            </section>
+
+            <section class="article-section">
+                <h2>The New Method</h2>
+                <div class="key-points">
+                    <ul>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <span>Enhanced Efficiency: The new method achieves 40% higher capture rates compared to existing technologies.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <span>Reduced Energy Requirements: Uses 30% less energy than conventional methods, making it more cost-effective.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-recycle"></i>
+                            <span>Sustainable Materials: Employs environmentally friendly materials that can be regenerated and reused.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-industry"></i>
+                            <span>Scalable Design: Can be implemented in various settings, from large industrial plants to smaller facilities.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Continuous Operation: Maintains consistent performance over extended periods without degradation.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2>Why This Matters</h2>
+                <p>The implications of this breakthrough are far-reaching. By making carbon capture more efficient and cost-effective, this technology could significantly accelerate our transition to a low-carbon economy. It offers a practical solution for industries that are difficult to decarbonize, such as cement and steel production.</p>
+                
+                <div class="quote-box">
+                    "This innovation represents a crucial step in our fight against climate change. By making carbon capture more accessible and efficient, we're opening new possibilities for sustainable industrial practices." - Dr. Sarah Chen, Lead Researcher
+                </div>
+            </section>
+
+            <section class="article-section">
+                <h2>Looking Ahead</h2>
+                <p>The research team is currently preparing for large-scale trials in collaboration with several industrial partners. These trials will test the technology's performance in real-world conditions and help refine the implementation process. Additionally, discussions are underway with policymakers to explore how this technology can be integrated into national climate strategies.</p>
+            </section>
+
+            <section class="article-section">
+                <h2>Conclusion</h2>
+                <p>While carbon capture technology alone cannot solve the climate crisis, this breakthrough represents a significant advancement in our toolkit for combating climate change. As we continue to develop and implement such innovations, we move closer to achieving our global climate goals and creating a more sustainable future for generations to come.</p>
+            </section>
+
+            <a href="writeups.html" class="back-to-blogs">
+                <i class="fas fa-arrow-left"></i> Back to Blogs
+            </a>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fade-in animation for article container
+        document.addEventListener('DOMContentLoaded', () => {
+            const articleContainer = document.querySelector('.article-container');
+            articleContainer.classList.add('visible');
+
+            // Intersection Observer for section animations
+            const sections = document.querySelectorAll('.article-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

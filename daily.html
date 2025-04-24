@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Tips - Sustina Sphere</title>
+    <link rel="stylesheet" href="daily.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <script src="daily.js" defer></script>
+    <meta name="description" content="Get daily sustainability tips and eco-friendly advice from SustainaSphere">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="chatbot.html" target="_blank"><img src="botpic1.png" class="chat-button" alt="chatbot"></a>
+    <!-- header -->
+    <div class="pic">
+        <div class="navbar" id="navbar">
+            <div class="navbar-brand">
+                <img src="SUSTAINA.jpg" class="navbar-logo" alt="SustainaSphere Logo">
+                <span class="navbar-name">SustainaSphere</span>
+            </div>
+            <div class="navbar-links">
+                <a href="home.html">Home</a>
+                <a href="ourteam.html">Our Team</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Daily Sustainability Tips</h1>
+            <p>Small changes, big impact. Get your daily dose of eco-friendly inspiration!</p>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <div class="category-card" data-category="eco-habits">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-Habits</h3>
+                </div>
+                <div class="category-card" data-category="zero-waste">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Zero-Waste Living</h3>
+                </div>
+                <div class="category-card" data-category="fashion">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Sustainable Fashion</h3>
+                </div>
+                <div class="category-card" data-category="tech">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Green Tech</h3>
+                </div>
+                <div class="category-card" data-category="diy">
+                    <i class="fas fa-tools"></i>
+                    <h3>DIY & Upcycling</h3>
+                </div>
+                <div class="category-card" data-category="plant-based">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Plant-Based Living</h3>
+                </div>
+                <div class="category-card" data-category="consumerism">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Mindful Consumerism</h3>
+                </div>
+                <div class="category-card" data-category="nature">
+                    <i class="fas fa-tree"></i>
+                    <h3>Nature Facts</h3>
+                </div>
+                <div class="category-card" data-category="community">
+                    <i class="fas fa-users"></i>
+                    <h3>Community & Action</h3>
+                </div>
+                <div class="category-card" data-category="seasonal">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Seasonal Tips</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="daily-tip">
+            <div class="tip-container">
+                <div class="tip-header">
+                    <span class="category-badge" id="current-category">Loading...</span>
+                    <span class="date" id="current-date"></span>
+                </div>
+                <div class="tip-content">
+                    <p id="current-tip">Loading your daily tip...</p>
+                    <a href="#" id="learn-more" class="learn-more-link" target="_blank">Learn More</a>
+                </div>
+                <div class="tip-actions">
+                    <button id="prev-tip" class="action-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <button id="next-tip" class="action-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="tip-engagement">
+                    <div class="reactions" id="reactions">
+                        <button class="reaction" data-reaction="like">👍</button>
+                        <button class="reaction" data-reaction="love">💚</button>
+                        <button class="reaction" data-reaction="interesting">🤔</button>
+                    </div>
+                    <div class="engagement-buttons">
+                        <button id="save-tip" class="action-btn"><i class="fas fa-bookmark"></i> Save Tip</button>
+                        <button id="challenge-friend" class="action-btn"><i class="fas fa-share-alt"></i> Challenge a Friend</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="saved-tips">
+            <h2>Your Saved Tips <span id="saved-count">0</span></h2>
+            <div id="saved-tips-list" class="saved-tips-list">
+                <!-- Saved tips will be populated here -->
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Get Daily Tips in Your Inbox</h2>
+            <p>Subscribe to our newsletter for a daily dose of sustainability inspiration!</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section" id="navigate">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="writeups.html" target="_blank">Writeups</a></li>
+                    <li><a href="events.html" target="_blank">Events</a></li>
+                    <li><a href="ourteam.html" target="_blank">Our Team</a></li>
+                    <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                    <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li>
+                        <h4>World Sustainable Development Summit 2025</h4>
+                        <p>5-7 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>12th Annual World Ocean Summit & Expo</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                    <li>
+                        <h4>2025 UN Development Cooperation Forum</h4>
+                        <p>12-13 March, 2025</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section" id="social">
+                <h3>CONNECT WITH US</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SustainaSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = "#39644c";
+            } else {
+                navbar.style.backgroundColor = "transparent";
+            }
+        };
+    </script>
+</body>
+</html> 
